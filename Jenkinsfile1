@@ -1,12 +1,12 @@
 pipeline {
     agent any
     tools {
-        terraform 'Terraform'
+        terraform 'terraform'
     }
     stages {
         stage('Git Checkout') {
             steps {
-                git credentialsId: 'GIT_CRED_siv', url: 'https://github.com/Cvaaaa/terraform.git'
+                git credentialsId: 'gircred', url: 'https://github.com/poojithachittimalla/terraform.git'
             }
         }
         stage('Terraform Init') {
